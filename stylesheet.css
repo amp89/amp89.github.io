@@ -1,0 +1,285 @@
+
+
+/*for testing*/
+/** {
+  border: 1px dashed black;
+}*/
+
+@media only screen and (min-device-width:600px){
+
+body {
+  background-color: #123652; /*full bg*/
+  color:black;
+  font-family: Arial;
+}
+
+div {
+  background-color: #496D89; /*div bg color*/
+  padding:3px;
+  margin:3px;
+  color:#042037; /*div default color*/
+}
+
+a {
+  pdding:0px;
+  margin:0px;
+  text-decoration: none;
+  color:#042037; /*div default color*/
+
+
+}
+
+a:hover {
+  /*text-decoration: none;
+  color:#aa7b39;
+  color:#aa7b39;
+  background-color: #553200;*/
+}
+
+#header {
+  font-size: 1.5em;
+  position:relative;
+  z-index: 1;
+  text-align: center;
+  border: 1px solid #042037; /*div default color*/
+
+}
+
+.menu_bar{
+  border: 1px solid #042037; /*div default color*/
+}
+
+.menu_item{
+  font-size:1em;
+  display:inline-block;
+  width:20%;
+  position: relative;
+  border: 1px solid #042037; /*div default color*/
+  border-radius: 8px;
+  text-align: center;
+}
+
+.menu_item_home{
+  margin-left: 2%;
+}
+
+.menu_item:hover{
+  background-color: #042037; /*div default color*/
+  color:#aa7b39; /*full bg*/
+}
+
+.content{
+  width:80%;
+  margin:auto;
+  background-color: #123652; /*full bg*/
+  font-size: 1em;
+}
+
+.sidebar{
+  font-size: 1.2em;
+  display:inline;
+  width:22%;
+  position:relative;
+  /*margin-top: 20px;*/
+  float:left;
+
+  border: 1px solid #042037; /*div default color*/
+
+}
+
+.sidebar_item{
+  font-size: .8em;
+  display:block;
+  width:90%;
+  position:relative;
+  float:left;
+}
+
+.sidebar a{
+  font-size:1em;
+}
+
+.sidebar_item:hover{
+  background-color: #042037; /*div default color*/
+  color:#aa7b39; /*full bg*/
+}
+
+.main_area{
+  display:inline-block;
+  width:70%;
+  position:relative;
+  float:right;
+  border: 1px solid #042037; /*div default color*/
+}
+
+#footer{
+  background-color: #123652; /*full bg*/
+  color:#496D89;  /**/
+  width:100%
+  position:relative;
+  clear:both;
+
+}
+
+.footer_item{
+  background-color: #123652; /*full bg*/
+  color:#496D89;
+  font-size:.6em;
+  border:0;
+  display:inline-block;
+  width:20%;
+  position: relative;
+  text-align: center;
+  align:center;
+}
+
+.footer_item a:hover{
+  color:#718EA4;
+}
+
+}/*end pc size*/
+
+/*
+I could do this by only putting the parts that need changed between the @media
+selectors but that will be done later
+
+*/
+
+/*mobile size*/
+@media only screen and (max-device-width:600px){
+
+  body {
+    background-color: #123652; /*full bg*/
+    color:black;
+    font-family: Arial;
+  }
+
+  div {
+    background-color: #496D89; /*div bg color*/
+    padding:3px;
+    margin:3px;
+    color:#042037; /*div default color*/
+  }
+
+  a {
+    pdding:0px;
+    margin:0px;
+    text-decoration: none;
+    color:#042037; /*div default color*/
+
+
+  }
+
+  a:hover {
+    /*text-decoration: none;
+    color:#aa7b39;
+    color:#aa7b39;
+    background-color: #553200;*/
+  }
+
+  #header {
+    font-size: 1.5em;
+    position:relative;
+    z-index: 1;
+    text-align: center;
+    border: 1px solid #042037; /*div default color*/
+
+  }
+
+  .menu_bar{
+    border: 1px solid #042037; /*div default color*/
+  }
+
+  .menu_item{
+    font-size:1em;
+    display:inline-block;
+    width:92%;
+    position: relative;
+    border: 1px solid #042037; /*div default color*/
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .menu_item:hover{
+    background-color: #042037; /*div default color*/
+    color:#aa7b39; /*full bg*/
+  }
+
+  .content{
+    width:96%;
+    margin:auto;
+    background-color: #123652; /*full bg*/
+    font-size: 1em;
+  }
+
+  .sidebar{
+    font-size: 1.2em;
+    display:none;
+    width:96%;
+    position:relative;
+    /*margin-top: 20px;*/
+    float:left;
+
+    border: 1px solid #042037; /*div default color*/
+
+  }
+
+  .sidebar_item{
+    font-size: .8em;
+    display:block;
+    width:90%;
+    position:relative;
+    float:left;
+  }
+
+  .sidebar a{
+    font-size:1em;
+  }
+
+  .sidebar_item:hover{
+    background-color: #042037; /*div default color*/
+    color:#aa7b39; /*full bg*/
+  }
+
+  .main_area{
+    display:inline-block;
+    width:96%;
+    position:relative;
+    float:left;
+    border: 1px solid #042037; /*div default color*/
+  }
+
+  #footer{
+    background-color: #123652; /*full bg*/
+    color:#496D89;  /**/
+    width:96%
+    position:relative;
+    clear:both;
+
+  }
+
+  .footer_item{
+    background-color: #123652; /*full bg*/
+    color:#496D89;
+    font-size:.6em;
+    border:0;
+    display:inline-block;
+    width:96%;
+    position: relative;
+    text-align: center;
+    align:center;
+  }
+
+  .footer_item a:hover{
+    color:#718EA4;
+  }
+
+
+}/*end mobile size*/
+
+
+/*all size stuff*/
+.post_title{
+  font-size: 1.1em;
+  font-weight: bold;
+}
