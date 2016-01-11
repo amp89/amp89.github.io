@@ -14,7 +14,7 @@ body {
 }
 
 div {
-  background-color: #496D89; /*div bg color*/
+  background-color: #718EA4; /*div bg color*/
   padding:3px;
   margin:3px;
   color:#042037; /*div default color*/
@@ -114,7 +114,7 @@ a:hover {
 
 #footer{
   background-color: #123652; /*full bg*/
-  color:#496D89;  /**/
+  color:#718EA4;  /**/
   width:100%
   position:relative;
   clear:both;
@@ -123,7 +123,7 @@ a:hover {
 
 .footer_item{
   background-color: #123652; /*full bg*/
-  color:#496D89;
+  color:#718EA4;
   font-size:.6em;
   border:0;
   display:inline-block;
@@ -133,8 +133,12 @@ a:hover {
   align:center;
 }
 
-.footer_item a:hover{
+.footer_item a{
   color:#718EA4;
+}
+
+.footer_item a:hover{
+  color:white;
 }
 
 }/*end pc size*/
@@ -178,11 +182,12 @@ selectors but that will be done later
   }
 
   #header {
-    font-size: 1.5em;
+    font-size: 1.7em;
     position:relative;
     z-index: 1;
     text-align: center;
     border: 1px solid #042037; /*div default color*/
+    height:15%;
 
   }
 
@@ -191,13 +196,15 @@ selectors but that will be done later
   }
 
   .menu_item{
-    font-size:1em;
+    font-size:2em;
     display:inline-block;
     width:92%;
     position: relative;
     border: 1px solid #042037; /*div default color*/
     border-radius: 8px;
     text-align: center;
+    padding-top:2px
+    height: 8%;
   }
 
   .menu_item:hover{
@@ -247,6 +254,7 @@ selectors but that will be done later
     position:relative;
     float:left;
     border: 1px solid #042037; /*div default color*/
+    font-size: 1.4em;
   }
 
   #footer{
@@ -261,13 +269,17 @@ selectors but that will be done later
   .footer_item{
     background-color: #123652; /*full bg*/
     color:#496D89;
-    font-size:.6em;
+    font-size:1.2em;
     border:0;
     display:inline-block;
     width:96%;
     position: relative;
     text-align: center;
     align:center;
+  }
+
+  .footer_item a{
+    color:#496D89;
   }
 
   .footer_item a:hover{
