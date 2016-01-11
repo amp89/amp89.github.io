@@ -182,12 +182,12 @@ selectors but that will be done later
   }
 
   #header {
-    font-size: 3em;
+    font-size: 4em;
     position:relative;
     z-index: 1;
     text-align: center;
     border: 1px solid #042037; /*div default color*/
-    height:25%;
+    height:auto;
 
   }
 
@@ -198,13 +198,13 @@ selectors but that will be done later
   .menu_item{
     font-size:2.5em;
     display:inline-block;
-    width:92%;
+    width:96%;
     position: relative;
     border: 1px solid #042037; /*div default color*/
     border-radius: 8px;
     text-align: center;
     padding-top:2px
-    height: 15%;
+    height: auto;
   }
 
   .menu_item:hover{
@@ -250,7 +250,7 @@ selectors but that will be done later
 
   .main_area{
     display:inline-block;
-    width:96%;
+    width:97%;
     position:relative;
     float:left;
     border: 1px solid #042037; /*div default color*/
