@@ -159,7 +159,7 @@ selectors but that will be done later
   }
 
   div {
-    background-color: #496D89; /*div bg color*/
+    background-color: #718EA4; /*div bg color*/
     padding:3px;
     margin:3px;
     color:#042037; /*div default color*/
@@ -182,12 +182,12 @@ selectors but that will be done later
   }
 
   #header {
-    font-size: 1.7em;
+    font-size: 3em;
     position:relative;
     z-index: 1;
     text-align: center;
     border: 1px solid #042037; /*div default color*/
-    height:15%;
+    height:25%;
 
   }
 
@@ -196,7 +196,7 @@ selectors but that will be done later
   }
 
   .menu_item{
-    font-size:2em;
+    font-size:2.5em;
     display:inline-block;
     width:92%;
     position: relative;
@@ -204,7 +204,7 @@ selectors but that will be done later
     border-radius: 8px;
     text-align: center;
     padding-top:2px
-    height: 8%;
+    height: 15%;
   }
 
   .menu_item:hover{
@@ -254,7 +254,7 @@ selectors but that will be done later
     position:relative;
     float:left;
     border: 1px solid #042037; /*div default color*/
-    font-size: 1.4em;
+    font-size: 2em;
   }
 
   #footer{
