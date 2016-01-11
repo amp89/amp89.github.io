@@ -110,6 +110,7 @@ a:hover {
   position:relative;
   float:right;
   border: 1px solid #042037; /*div default color*/
+  padding:1%;
 }
 
 #footer{
@@ -255,6 +256,7 @@ selectors but that will be done later
     float:left;
     border: 1px solid #042037; /*div default color*/
     font-size: 2em;
+    padding:1%;
   }
 
   #footer{
