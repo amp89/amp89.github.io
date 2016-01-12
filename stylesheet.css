@@ -115,7 +115,13 @@ a:hover {
 
 .code{ /*combine with pre tag in html*/
   font-family:Courier;
-  font-size:1em;
+  font-size:.86em;
+  color: black;
+
+}
+
+.small_code{
+  font-size:.6em;
 }
 
 
@@ -312,4 +318,12 @@ selectors but that will be done later
 
 .main_area a:hover{
   color:white;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.code{
+  font-weight: bold;
 }

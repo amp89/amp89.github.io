@@ -1,0 +1,159 @@
+<DOCTYPE! html>
+<html>
+
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css" />
+		<title>Alex's Java Blog - Three Types of Equal</title>
+	</head>
+
+	<body>
+
+		<div class="content">
+
+			<div id="header">
+							Alex Peterson's Java Learning Blog - Three Types of Equal
+			</div>
+
+
+
+			<div class="menu_bar">
+
+				<a href="index.html">
+					<div class="menu_item menu_item_home">
+					Home
+					</div>
+				</a>
+
+				<a href="latest.html">
+					<div class="menu_item">
+					Latest Post
+					</div>
+				</a>
+
+				<a href="all.html">
+					<div class="menu_item">
+					All Posts
+					</div>
+				</a>
+
+
+				<a href="contact.html">
+					<div class="menu_item">
+					Contact Info
+					</div>
+				</a>
+
+
+
+
+
+
+			</div>
+
+
+			<div class="sidebar">
+				POSTS:
+
+				<!-- put list of post links here -->
+				<a href="1.html">
+					<div class="sidebar_item">
+						If/Else vs Switch
+					</div>
+				</a>
+
+				<a href="2.html">
+					<div class="sidebar_item">
+						Three Types of Equal
+					</div>
+				</a>
+				<!-- stop here -->
+
+
+			</div>
+
+			<div class="main_area">
+				<span class="post_title">
+					Three Types of Equal<br><br>
+				</span>
+				<p>
+					There are 3 types of equal operators in Java (=, ==, and .equals).
+				</p>
+				<p>
+					The first one, "=", simply assigns values to a variable.  The value on the right side of the operator is assigned to the variable on the left.
+				</p>
+				<span class="bold">Single Equal Example:</span>
+				<pre class="code">
+int x = 2; //The = assigns the value 2 to x.
+String y = "Stuff"; //The = assigns "Stuff" to y.
+	    	</pre>
+				<p>
+					The "==" is a little different.  It compares to numerical values, but should not be used to compare strings.  If the values on both sides of "==" are the same, then it will be the same as the boolean value true.  For example, if there were an integer variable "x" that was equal to "2" then the following would be true: Writing <span class="code">if (x=2)</span> is the same as writing <span class="code">if (true)</span>.
+				</p>
+				<span class="bold">Double Equals Example:</span>
+				<pre class="code">
+int x = 2;
+
+if (x==2);
+//the == compares the variable x to the integer 2
+{
+	System.out.println("X must equal 2 for this to print.");
+}
+				</pre>
+				<p>
+					Last, the ".equals" is used to compare two strings.  If the string or string variable before the "." is the same as the string or string variable in the parenthesis, then it will be true.  For example, if there was a string variable "x" that was equal to "Hello!", the following would be true: Writing <span class="code">if (x.equals("Hello!"))</span> is the same as writing <span class="code">if(true)</span>.
+				</p>
+				<span class="bold">".equals" Example:</span>
+				<pre class="code">
+String x = "Hello!";
+
+//the .equals compares string values, the same way ==
+//compares numerical values
+if (x.equals("Hello!")){  compares numerical values.
+  System.out.println("x must be equal to \"Hello!\"");
+}
+
+if ("Hello!".equals(x)){
+  System.out.println("This works too!");
+}
+
+if ("Hi!".equals("Hi!")){
+  System.out.println("And so does this!");
+}
+
+				</pre>
+
+				<p>
+					Links to Java source code for working examples:
+					<a href="https://github.com/amp89/blogCodeExamples/blob/master/SingleEqual.java">SingleEqual</a>,
+					<a href="https://github.com/amp89/blogCodeExamples/blob/master/DoubleEqual.java">DoubleEqual</a>,
+					<a href="https://github.com/amp89/blogCodeExamples/blob/master/DotEquals.java">.equals</a>
+				</p>
+
+			</div><!-- end main area -->
+
+
+
+			<div id="footer">
+				<div class="footer_item">
+					<a href="index.html">Home</a>
+				</div>
+
+				<div class="footer_item">
+					<a href="latest.html">Latest Post</a>
+				</div>
+
+				<div class="footer_item">
+					<a href="all.html">All Posts</a>
+				</div>
+
+				<div class="footer_item">
+					<a href="contact.html">Contact Info</a>
+				</div>
+
+
+			</div>
+		</div>
+	</body>
+
+
+</html>
