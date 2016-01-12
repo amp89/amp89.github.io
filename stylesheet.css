@@ -199,13 +199,14 @@ selectors but that will be done later
   .menu_item{
     font-size:2.5em;
     display:inline-block;
-    width:96%;
+    width:97%;
     position: relative;
     border: 1px solid #042037; /*div default color*/
     border-radius: 8px;
     text-align: center;
     padding-top:2px
     height: auto;
+
   }
 
   .menu_item:hover{
