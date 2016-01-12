@@ -309,3 +309,7 @@ selectors but that will be done later
   font-size: 1.1em;
   font-weight: bold;
 }
+
+.main_area a:hover{
+  color:white;
+}
