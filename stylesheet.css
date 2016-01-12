@@ -113,6 +113,12 @@ a:hover {
   padding:1%;
 }
 
+.code{ /*combine with pre tag in html*/
+  font-family:Courier;
+  font-size:1em;
+}
+
+
 #footer{
   background-color: #123652; /*full bg*/
   color:#718EA4;  /**/
@@ -258,6 +264,11 @@ selectors but that will be done later
     border: 1px solid #042037; /*div default color*/
     font-size: 2em;
     padding:1%;
+  }
+
+  .code{ /*combine with pre tag in html*/
+    font-family:Courier;
+    font-size:.8em;
   }
 
   #footer{

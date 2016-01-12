@@ -3,7 +3,7 @@
 
 	<head>
 		<link type="text/css" rel="stylesheet" href="stylesheet.css" />
-		<title>Alex's Java Blog - Coming Soon!</title>
+		<title>Alex's Java Blog - If/Else and Switch</title>
 	</head>
 
 	<body>
@@ -11,7 +11,7 @@
 		<div class="content">
 
 			<div id="header">
-							Alex Peterson's Java Learning Blog - Coming Soon!
+							Alex Peterson's Java Learning Blog - If/Else and Switch
 			</div>
 
 
@@ -54,23 +54,89 @@
 			<div class="sidebar">
 				POSTS:
 
-
+				<!-- put list of post links here -->
 				<a href="1.html">
 					<div class="sidebar_item">
-						Coming Soon!
+						If/Else vs Switch
 					</div>
 				</a>
+				<!-- stop here -->
 
 
 			</div>
 
 			<div class="main_area">
 				<span class="post_title">
-					Post One<br><br>
+					Switch and If/Else<br><br>
 				</span>
-				This is just a test post to check the navigation and to
-				test mobile responsive css.
-			</div>
+				<p>Switch and if/else statements have very little differences when it comes to the functionality of the code.  Below are examples of code for first a switch statement, and then an if/else statement.  They give the exact same results.
+				</p>
+
+Switch:
+<pre class="code">
+    switch (x){
+      case 0: y = "zero";
+        break;
+      case 1: y = "one";
+        break;
+      case 2: y = "two";
+        break;
+      case 3: y = "three";
+        break;
+      case 4: y = "four";
+        break;
+      default: y = "error";
+        break;
+    }
+	</pre>
+<br>
+If/Else:
+	<pre class="code">
+		if (x==0)
+    {
+      y = "zero";
+    }
+    else if (x == 1)
+    {
+      y = "one";
+    }
+    else if (x==2)
+    {
+      y = "two";
+    }
+    else if (x==3)
+    {
+      y = "three";
+    }
+    else if (x==4)
+    {
+      y = "four";
+    }
+    else
+    {
+      y = "error";
+    }
+
+	</pre>
+
+				<p>Why would a "switch" statement be useful when it works the same as an "if/else" statement?  It can be difficult to think of reasons to use a switch statement when an if/else can do the same thing, and more, however, there are a few instances where a "switch" can make more sense than an "if/else"
+				</p>
+
+				<p>One situation in which a "switch" works best, is reducing errors when a decision must be made when comparing one variable.  As you can see in the code, the "x" is only written one time in the switch code, where as it is written 5 times in the if/else code.  It is much quicker and less prone to errors to write switch(x) than to write (x==z) five times.
+				</p>
+
+				<p>On the other hand, if more complicated decision making must be made (for example, x == something and z == something else), an if/else statement would be much simpler.
+				</p>
+
+				<p>Another reason switch would be used instead of an if else statement is readability.  This might be my own personal bias, however, when I compare the too codes that are identical in functionality, it seems to take less time to comprehend what is going on in the switch statement.
+				</p>
+
+				<p>Links to working programs: <a href="https://github.com/amp89/blogCodeExamples/blob/master/Switch.java">Switch, </a><a href="https://github.com/amp89/blogCodeExamples/blob/master/IfElse.java">If/Else</a>
+				</p>
+
+
+
+			</div><!-- end main area -->
 
 
 
