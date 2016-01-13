@@ -1,0 +1,193 @@
+<DOCTYPE! html>
+<html>
+
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css" />
+		<title>Alex's Java Blog - Void and Return</title>
+	</head>
+
+	<body>
+
+		<div class="content">
+
+			<div id="header">
+							Alex Peterson's Java Learning Blog - Void and Return
+			</div>
+
+
+
+			<div class="menu_bar">
+
+				<a href="index.html">
+					<div class="menu_item menu_item_home">
+					Home
+					</div>
+				</a>
+
+				<a href="latest.html">
+					<div class="menu_item">
+					Latest Post
+					</div>
+				</a>
+
+				<a href="all.html">
+					<div class="menu_item">
+					All Posts
+					</div>
+				</a>
+
+
+				<a href="contact.html">
+					<div class="menu_item">
+					Contact Info
+					</div>
+				</a>
+
+
+
+
+
+
+			</div>
+
+
+			<div class="sidebar">
+				POSTS:
+
+				<!-- put list of post links here -->
+				<a href="1.html">
+					<div class="sidebar_item">
+						If/Else vs Switch
+					</div>
+				</a>
+
+				<a href="2.html">
+					<div class="sidebar_item">
+						Three Types of Equal
+					</div>
+				</a>
+
+				<a href="3.html">
+					<div class="sidebar_item">
+						Casting
+					</div>
+				</a>
+
+				<a href="4.html">
+					<div class="sidebar_item">
+						For, While, and Do While
+					</div>
+				</a>
+
+				<a href="5.html">
+					<div class="sidebar_item">
+						Void and Return
+					</div>
+				</a>
+				<!-- stop here -->
+
+
+			</div>
+
+			<div class="main_area">
+				<span class="post_title">
+					Void and Return<br><br>
+				</span>
+        <p>In java, a method is either declared with a return type or with void.  The void in a method declarations means that the method cannot return anything.  For example, if there is a return type, it will be declared like this: <span class="code">public static int multiplyAndReturn(int x, int y){}</span>.  If there is no return type, it will look like this: <span class="code">public static void multiplyAndReturn(int x, int y){}</span>.  The code below shows a method that cannot return anything.
+        </p>
+        <span class="bold">Void Example: </span>
+        <pre class="code">
+public static void multiply(int x, int y){
+  int result = x*y;
+}
+        </pre>
+        <p>
+          Below is a method that can return data (notice the "return" in the method):
+        </p>
+        <span class="bold">Return Example:</span>
+        <pre class="code">
+public static int multiplyAndReturn(int x, int y){
+  int result = x*y;
+  return result;
+}
+        </pre>
+        <span class="bold">Complete Example:</span>
+        <pre class="code">
+public class Return{
+  public static void main(String[] args){
+
+    int x=2,y=10,z;
+
+    // Here multiplyAndReturn is passed the
+    // variables x and y, and returns a value which
+    //is assigned here to z
+    z = multiplyAndReturn(x,y);
+    System.out.println("z was returned from multiplyAndReturn");
+    System.out.println("z is " + z);
+
+    //the multiply is called, and it multiplies x and z
+    //and assigns it to a variable the same way as the
+    //multiplyAndReturn method, however there is no
+    //return type, only void, so nothing comes out
+    //of that method.
+    multiply(x,y);
+    System.out.print("\nThe method multiply() was called,");
+    System.out.print(" however there is no way to return\n anything");
+    System.out.println(" since it was declared with a \"void\"");
+  }
+
+  //method without a return type
+  //this cannot return anything, or there will be an error.
+  public static void multiply(int x, int y){
+    int result = x*y;
+  }
+
+  //method with a return type
+  //this must return an int, or there will be an error
+  public static int multiplyAndReturn(int x, int y){
+    int result = x*y;
+    return result;
+  }
+
+}
+        </pre>
+
+
+
+
+				<p>Links to Java source code for working examples:
+					<a href="https://github.com/amp89/blogCodeExamples/blob/master/Return.java">Return</a>
+
+
+				</p>
+
+
+
+			</div><!-- end main area -->
+
+
+
+			<div id="footer">
+				<div class="footer_item">
+					<a href="index.html">Home</a>
+				</div>
+
+				<div class="footer_item">
+					<a href="latest.html">Latest Post</a>
+				</div>
+
+				<div class="footer_item">
+					<a href="all.html">All Posts</a>
+				</div>
+
+				<div class="footer_item">
+					<a href="contact.html">Contact Info</a>
+				</div>
+
+
+			</div>
+		</div>
+	</body>
+
+
+</html>

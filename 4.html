@@ -1,0 +1,218 @@
+<DOCTYPE! html>
+<html>
+
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css" />
+		<title>Alex's Java Blog - For, While, and Do While</title>
+	</head>
+
+	<body>
+
+		<div class="content">
+
+			<div id="header">
+							Alex Peterson's Java Learning Blog - For, While, and Do While
+			</div>
+
+
+
+			<div class="menu_bar">
+
+				<a href="index.html">
+					<div class="menu_item menu_item_home">
+					Home
+					</div>
+				</a>
+
+				<a href="latest.html">
+					<div class="menu_item">
+					Latest Post
+					</div>
+				</a>
+
+				<a href="all.html">
+					<div class="menu_item">
+					All Posts
+					</div>
+				</a>
+
+
+				<a href="contact.html">
+					<div class="menu_item">
+					Contact Info
+					</div>
+				</a>
+
+
+
+
+
+
+			</div>
+
+
+			<div class="sidebar">
+				POSTS:
+
+				<!-- put list of post links here -->
+				<a href="1.html">
+					<div class="sidebar_item">
+						If/Else vs Switch
+					</div>
+				</a>
+
+				<a href="2.html">
+					<div class="sidebar_item">
+						Three Types of Equal
+					</div>
+				</a>
+
+				<a href="3.html">
+					<div class="sidebar_item">
+						Casting
+					</div>
+				</a>
+
+				<a href="4.html">
+					<div class="sidebar_item">
+						For, While, and Do While
+					</div>
+				</a>
+
+				<a href="5.html">
+					<div class="sidebar_item">
+						Void and Return
+					</div>
+				</a>
+				<!-- stop here -->
+
+
+			</div>
+
+			<div class="main_area">
+				<span class="post_title">
+					For, While, and Do While<br><br>
+				</span>
+
+        <p>"For", "while", and "do while" loops all have their place in programming.  "For" loops are mainly used when the programmer knows how many times the loop must run.  "While" loops are best used when the number of loops required is unknown.  The only difference between a "while" loop and a "do while" loop is a "do while" loop preforms the task before checking the condition, whereas a "while" loop will check the condition before preforming the task.
+        </p>
+        <p>"For" loops will run a specified number of times.  They use the following syntax: <span class="code">for( initialized variable; stopping condition; increment ){}</span>.
+        </p>
+        <span class="bold">For Loop Example:</span>
+        <pre class="code">
+int x = 0;
+
+//this loop will run 10 times
+//i starts at 0, and one is added after each loop.
+//the loop will not run if i is greater or equal to 10.
+for(int i = 0; i&#60;10; i++){
+  x++;
+  System.out.println("This is iteration #"+x);
+}
+        </pre>
+        <p>"For" loops can also be used to iterate over an array, using the following syntax: <span class="code">for( Type variable:array ){}</span>.
+        </p>
+        <span class="bold">For Loop Array Example:</span>
+        <pre class="code">
+int x[] = {1,2,3,4,5,6,7,8,9,10};
+
+//this loop will iterate through the array of ints, x
+for(int i:x){
+  System.out.println("This is iteration #"+i);
+}
+        </pre>
+				<p>"While" loops are best used if the number of times the loop must run is unknown.  As long as the condition inside of the parenthesis is true, the loop will continue to run.  In the example code, there was no need to know the number of loops, although it does the exact same thing as the "for" loop example.
+				</p>
+				<span class="bold">While Loop Example:</span>
+				<pre class="code">
+int x[] = {1,2,3,4,5,6,7,8,9,10};
+
+//this loop will iterate through the array of ints, x
+for(int i:x){
+  System.out.println("This is iteration #"+i);
+}
+				</pre>
+				<p>"Do While" loops are nearly identical to regular "while" loops, except the condition is checked at the end.
+				</p>
+				<span class="bold">Do While Loop Example:</span>
+				<pre class="code">
+int x=0,y=10;
+
+do{
+  System.out.println("x is "+x+"and y is "+y);
+  x++;
+}while (x!=y);
+				</pre>
+				<p>The important thing to note is that the loop runs prior to the condition test.  Therefore, even if the condition is false, the loop will run at least once.  The two examples below show the different results between a regular "while" loop and a "do while" loop, given a condition that would be false.  As you can see, the "do while" loop still ran through one time, wheras the regular "while" loop did not.
+				</p>
+				<span class="bold">Do While Loop False Condition Example:</span>
+				<pre class="code">
+int x=10,y=10;
+
+do{
+  System.out.println("x is "+x+" and y is "+y);
+}while (x!=y);
+				</pre>
+				<span class="bold">While Loop False Condition Example:</span>
+				<pre class="code">
+int x=10,y=10;
+
+//this loop will stop once x == y;
+while(x !=y ){
+  System.out.println("x is "+x+" and y is "+y);
+}
+				</pre>
+				<span class="bold">Do While Loop False Condition Result:</span>
+				<pre class="code">
+Alexs-MacBook-Pro:blogCodeExamples alex$ java DoWhile2
+x is 10 and y is 10
+Alexs-MacBook-Pro:blogCodeExamples alex$
+				</pre>
+				<span class="bold">While Loop False Condition Result:</span>
+				<pre class="code">
+Alexs-MacBook-Pro:blogCodeExamples alex$ java While2
+Alexs-MacBook-Pro:blogCodeExamples alex$
+				</pre>
+
+
+
+				<p>Links to Java source code for working examples:
+					<a href="https://github.com/amp89/blogCodeExamples/blob/master/For.java">For,</a>
+					<a href="https://github.com/amp89/blogCodeExamples/blob/master/ForArray.java">ForArray,</a>
+					<a href="https://github.com/amp89/blogCodeExamples/blob/master/While.java">While,</a>
+					<a href="https://github.com/amp89/blogCodeExamples/blob/master/DoWhile.java">Do While,</a>
+					<a href="https://github.com/amp89/blogCodeExamples/blob/master/While2.java">While (False), </a>
+					<a href="https://github.com/amp89/blogCodeExamples/blob/master/DoWhile2.java">Do While (False)</a>
+
+				</p>
+
+
+
+			</div><!-- end main area -->
+
+
+
+			<div id="footer">
+				<div class="footer_item">
+					<a href="index.html">Home</a>
+				</div>
+
+				<div class="footer_item">
+					<a href="latest.html">Latest Post</a>
+				</div>
+
+				<div class="footer_item">
+					<a href="all.html">All Posts</a>
+				</div>
+
+				<div class="footer_item">
+					<a href="contact.html">Contact Info</a>
+				</div>
+
+
+			</div>
+		</div>
+	</body>
+
+
+</html>

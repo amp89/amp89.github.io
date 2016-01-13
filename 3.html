@@ -1,0 +1,155 @@
+<DOCTYPE! html>
+<html>
+
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css" />
+		<title>Alex's Java Blog - Casting</title>
+	</head>
+
+	<body>
+
+		<div class="content">
+
+			<div id="header">
+							Alex Peterson's Java Learning Blog - Casting
+			</div>
+
+
+
+			<div class="menu_bar">
+
+				<a href="index.html">
+					<div class="menu_item menu_item_home">
+					Home
+					</div>
+				</a>
+
+				<a href="latest.html">
+					<div class="menu_item">
+					Latest Post
+					</div>
+				</a>
+
+				<a href="all.html">
+					<div class="menu_item">
+					All Posts
+					</div>
+				</a>
+
+
+				<a href="contact.html">
+					<div class="menu_item">
+					Contact Info
+					</div>
+				</a>
+
+
+
+
+
+
+			</div>
+
+
+			<div class="sidebar">
+				POSTS:
+
+				<!-- put list of post links here -->
+				<a href="1.html">
+					<div class="sidebar_item">
+						If/Else vs Switch
+					</div>
+				</a>
+
+				<a href="2.html">
+					<div class="sidebar_item">
+						Three Types of Equal
+					</div>
+				</a>
+
+				<a href="3.html">
+					<div class="sidebar_item">
+						Casting
+					</div>
+				</a>
+
+				<a href="4.html">
+					<div class="sidebar_item">
+						For, While, and Do While
+					</div>
+				</a>
+
+				<a href="5.html">
+					<div class="sidebar_item">
+						Void and Return
+					</div>
+				</a>
+				<!-- stop here -->
+
+
+			</div>
+
+			<div class="main_area">
+				<span class="post_title">
+					Casting<br><br>
+				</span>
+
+        <p>
+          Casting a double variable to an integer variable removes everything after the decimal place.  Given a double x and an integer y, the code to store x's value in y would look like this: <span class="code">y = (int)x;</span>.
+        </p>
+        <span class="bold">Casting Example:</span>
+        <pre class="code">
+
+double x = 4.564654;
+int y;
+
+//the "(int)" changes the x to an integer, a
+//value that can be held by y, by dropping
+//everything after the decimal point
+y = (int)x;
+
+        </pre>
+        <p>
+          One purpose of casting a double to an int is to generate a random integer.  Java's Math.random() can only produce a number greater to equal to zero and less than one.  In order to create a random integer, we have to modify that number by  multiplying it, and casting it to an int.  The statement to generate a random number between 0 and 5 would look like this: int x = (int)(Math.random()*6);.  Multiplying Math.random() by 6 would return any double from 0 to 5.99999…, and casting any of these numbers to an integer would return any integer from 0 to 5.
+        </p>
+        <span class="bold">Casting Random Number Example:</span>
+        <pre class="code">
+//create a random integer between 0 and 5;
+int x = (int)(Math.random()*6);
+        </pre>
+
+
+				<p>
+					Links to Java source code for working examples:
+					<a href="https://github.com/amp89/blogCodeExamples/blob/master/Casting.java">Casting</a>,
+					<a href="https://github.com/amp89/blogCodeExamples/blob/master/CastingExample.java">Casting Example (Random Number Generator)</a>,
+				</p>
+
+			</div><!-- end main area -->
+
+
+
+			<div id="footer">
+				<div class="footer_item">
+					<a href="index.html">Home</a>
+				</div>
+
+				<div class="footer_item">
+					<a href="latest.html">Latest Post</a>
+				</div>
+
+				<div class="footer_item">
+					<a href="all.html">All Posts</a>
+				</div>
+
+				<div class="footer_item">
+					<a href="contact.html">Contact Info</a>
+				</div>
+
+
+			</div>
+		</div>
+	</body>
+
+
+</html>
