@@ -121,7 +121,10 @@ a:hover {
 }
 
 .small_code{
+  font-family:Courier;
   font-size:.86em;
+  color:black;
+
 }
 
 
@@ -278,7 +281,10 @@ selectors but that will be done later
   }
 
   .small_code{
+    font-family:Courier;
     font-size:.7em;
+    color:black;
+
   }
 
   #footer{
