@@ -282,7 +282,7 @@ selectors but that will be done later
 
   .small_code{
     font-family:Courier;
-    font-size:.7em;
+    font-size:.65em;
     color:black;
 
   }
@@ -335,5 +335,9 @@ selectors but that will be done later
 }
 
 .code{
+  font-weight: bold;
+}
+
+.small_code{
   font-weight: bold;
 }
