@@ -121,7 +121,7 @@ a:hover {
 }
 
 .small_code{
-  font-size:.6em;
+  font-size:.86em;
 }
 
 
@@ -275,6 +275,10 @@ selectors but that will be done later
   .code{ /*combine with pre tag in html*/
     font-family:Courier;
     font-size:.8em;
+  }
+
+  .small_code{
+    font-size:.6em;
   }
 
   #footer{
