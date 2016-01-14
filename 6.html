@@ -3,7 +3,7 @@
 
 	<head>
 		<link type="text/css" rel="stylesheet" href="stylesheet.css" />
-		<title>Alex's Java Blog - Contact</title>
+		<title>Alex's Java Blog - Parameter vs Argument</title>
 	</head>
 
 	<body>
@@ -11,7 +11,7 @@
 		<div class="content">
 
 			<div id="header">
-							Alex Peterson's Java Learning Blog - Contact
+							Alex Peterson's Java Learning Blog - Parameter vs Argument
 			</div>
 
 
@@ -39,7 +39,7 @@
 
 				<a href="contact.html">
 					<div class="menu_item">
-						Contact
+					Contact Info
 					</div>
 				</a>
 
@@ -53,8 +53,8 @@
 
 			<div class="sidebar">
 				POSTS:
-				
-				<!-- put list of post links here -->
+
+        <!-- put list of post links here -->
 				<a href="1.html">
 					<div class="sidebar_item">
 						If/Else vs Switch
@@ -94,12 +94,42 @@
 				<!-- stop here -->
 
 
-
 			</div>
 
 			<div class="main_area">
-									Email: <a href="mailto:mail@alexmpeterson.com">mail@alexmpeterson.com</a>
-			</div>
+				<span class="post_title">
+					Parameter vs. Argument<br><br>
+				</span>
+
+        <p>Parameters and arguments must be used together to pass values into a method.  A parameter is something that is written with a method when the method is declared.  It states what types of values that the method will be accepting, and variable names for those values.  An Argument is something that is passed into the method.  For example, in the code below, the parameter is and integer variable named "y".  The argument (the value passed to the method "printStuff") is "x".  The value in argument "x" is then stored in the parameter "y" for use within the "printStuff" method.
+        </p>
+
+        <span class="bold">Parameter vs Argument Example:</span>
+
+        <pre class="code">
+public static void main(String[] args){
+
+  int x = 2;
+  printStuff(x); //"x" is the argument
+}
+
+//Below, "y" is the parameter.  It stores
+//the value from the argument "x" for
+//use wthin the "printStuff" method.
+public static void printStuff(int y){
+  System.out.println(y);
+}
+        </pre>
+
+				<p>Links to Java source code for a working example:
+					<a href="https://github.com/amp89/blogCodeExamples/blob/master/ParametersAndArguments.java">Parameter and Argument</a>
+
+
+				</p>
+
+
+
+			</div><!-- end main area -->
 
 
 
