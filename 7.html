@@ -1,0 +1,321 @@
+<DOCTYPE! html>
+<html>
+
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css" />
+		<title>Alex's Java Blog - Static Classes, and Math.random()</title>
+	</head>
+
+	<body>
+
+		<div class="content">
+
+			<div id="header">
+							Alex Peterson's Java Learning Blog - Static Classes, and Math.random()
+			</div>
+
+
+
+			<div class="menu_bar">
+
+				<a href="index.html">
+					<div class="menu_item menu_item_home">
+					Home
+					</div>
+				</a>
+
+				<a href="latest.html">
+					<div class="menu_item">
+					Latest Post
+					</div>
+				</a>
+
+				<a href="all.html">
+					<div class="menu_item">
+					All Posts
+					</div>
+				</a>
+
+
+				<a href="contact.html">
+					<div class="menu_item">
+					Contact Info
+					</div>
+				</a>
+
+
+
+
+
+
+			</div>
+
+
+			<div class="sidebar">
+				POSTS:
+
+        <!-- put list of post links here -->
+				<a href="1.html">
+					<div class="sidebar_item">
+						If/Else vs Switch
+					</div>
+				</a>
+
+				<a href="2.html">
+					<div class="sidebar_item">
+						Three Types of Equal
+					</div>
+				</a>
+
+				<a href="3.html">
+					<div class="sidebar_item">
+						Casting
+					</div>
+				</a>
+
+				<a href="4.html">
+					<div class="sidebar_item">
+						For, While, and Do While
+					</div>
+				</a>
+
+				<a href="5.html">
+					<div class="sidebar_item">
+						Void and Return
+					</div>
+				</a>
+
+
+				<a href="6.html">
+					<div class="sidebar_item">
+						Parameter vs. Argument
+					</div>
+				</a>
+
+				<a href="7.html">
+					<div class="sidebar_item">
+						Static Classes, and Math.random()
+					</div>
+				</a>
+
+				<!-- stop here -->
+
+
+			</div>
+
+			<div class="main_area">
+				<span class="post_title">
+					Static Classes, and Math.random()<br><br>
+				</span>
+
+        <p>Math is a class that is built in to Java.  The "M" is capitalized because, in Java, capitalizing the first letter of a class follows standard naming convention.  It is a "final static" class, which will be discussed later in this post.  Information on all of the methods in the class Math can be found <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Math.html#method_summary.">by clicking here. </a>
+        </p>
+        <p>
+          I mentioned that "Math" is a static class, or a class that cannot be called using a reference variable.  This is because it has a constructor that was declared "private".  A constructor is added automatically by the compiler if the programmer doesn't declare one.  A public constructor would look like this, <span class="code">public Math(){}</span>, and a private constructor would look this, <span class="code">private Math(){}</span>.  A private constructor means that outside of that class, the constructor cannot be called.  Therefore, an object cannot be made of that class.  The examples below show the difference between a public class and a static class:
+        </p>
+
+        <span class="bold">Public Class Example:</span>
+        <pre class="code">
+public class NonStaticExample{
+  public NonStaticExample(){
+    //This is a constructor in its default state
+    //the compiler will do this automatically if
+    //the programmer doesn't put a constructor here
+  }
+
+  static void printMe(String thingToPrint){
+    System.out.println(thingToPrint);
+  }
+}
+        </pre>
+        <span class="bold">Static Class Example:</span>
+        <pre class="code">
+public class StaticExample{
+  private StaticExample(){
+    //This is the constructor
+    //Since it is marked private,
+    //an ojbect cannot be made of
+    //this class.
+  }
+
+  static void printMe(String thingToPrint){
+
+    System.out.println(thingToPrint);
+  }
+}
+        </pre>
+        <p>As you can see in the examples, the static class's constructor is <span class="code"> private StaticExample(){}</span>, and the public class's constructor is <span class="code">public NonStaticExample(){}</span>.  The "private" disallows any instantiation outside of the class.
+        </p>
+        <span class="bold">Public Object Example (Makes an object of NonStaticExample from the Public Class Example):</span>
+        <pre class="code">
+public class NonStaticObject{
+  public static void main(String[] args){
+
+    //now we can make an instance variable call the method.
+    //if, in NonStaticExample.java, the constructor was
+    //marked private, this code would not compile.
+    NonStaticExample exampleObject = new NonStaticExample();
+    exampleObject.printMe("This Will Print");
+  }
+}
+        </pre>
+
+        <span class="bold">Static Object Example (Cannot make an object of type StaticExample from the Static Class Example):</span>
+        <pre class="code">
+public class StaticObject{
+
+  public static void main(String[] args){
+
+    String myString = "Print This!";
+
+    StaticExample.printMe(myString);
+
+    //This file will not compile if
+    //the statement below were included, because
+    //StaticExample is marked private,
+    //therefore a new Object cannot be instantiated.
+
+    //StaticExample newObject = new StaticExample();
+
+  }
+
+}
+        </pre>
+        <p>The only way to use a method in the static class, is to use the following convention: <span class="code">ClassName.method()</span>.  In a public class, as seen in the example, it is possible to make a reference variable referencing an object of that type, and then calling a method on that reference variable.
+        </p>
+        <p>Since the "Math" class in Java is static, an object of type "Math" cannot be assigned to a reference variable, and its methods must be called in the following manner: <span class="code">Math.random()</span>.
+        </p>
+
+        <span class="bold">Random Method Example:</span>
+
+        <pre class="code">
+
+public class RandomMath{
+  public static void main(String[] args){
+    double x = Math.random();
+    System.out.print("Random Stuff: ");
+    System.out.println(x);
+  }
+}
+
+        </pre>
+        <p>".random()" is a method of the class "Math".   The ".random()" method's return type is double.  Specifically, it returns a double value from zero, up to (but not including) one.  If the code above is ran, "x" will be assigned a random value greater or equal to zero, but less than one.
+        </p>
+        <span class="bold">Random Return Example:</span>
+        <pre class="code">
+Alexs-MacBook-Pro:blogCodeExamples alex$ java RandomMath
+Random Stuff: 0.05666126052913312
+Alexs-MacBook-Pro:blogCodeExamples alex$ java RandomMath
+Random Stuff: 0.9774753303466464
+Alexs-MacBook-Pro:blogCodeExamples alex$ java RandomMath
+Random Stuff: 0.7035581948539118
+Alexs-MacBook-Pro:blogCodeExamples alex$ java RandomMath
+Random Stuff: 0.9967688111607114
+Alexs-MacBook-Pro:blogCodeExamples alex$ java RandomMath
+Random Stuff: 0.5319485858758239
+Alexs-MacBook-Pro:blogCodeExamples alex$
+        </pre>
+        <p>Math is also declared as a final class, which means it cannot be extended.
+        </p>
+        <span class="bold">Extending a Non-Final Class Example:</span>
+        <pre class="code">
+public class Extending extends NonStaticExample{
+
+  public static void main(String[] args){
+    //this has the capabilities from NonStaticExample
+    //but we are also able to add new things
+    //it can be extended since it is not a Static class
+    //It would be impossible to try to extend
+    //the class "StaticExample," since it is private.
+    printMe("This is a method from NonStaticExample!");
+    System.out.println("This is new stuff!");
+  }
+}
+        </pre>
+        <span class="bold">Final Class Example:</span>
+        <pre class="code">
+final class NonStaticExampleFinal{
+  public NonStaticExampleFinal(){
+  }
+
+  static void printMe(String thingToPrint){
+    System.out.println(thingToPrint);
+  }
+}
+        </pre>
+        <span class="bold">Extending a Final Class Example: (DOES NOT COMPILE (on purpose...))</span>
+        <pre class="code">
+public class ExtendingFinal extends NonStaticExampleFinal{
+  //**************************************************
+  //this fails to compile, since NonStaticExampleFinal
+  //is a final class.
+  //***************************************************
+
+  public static void main(String[] args){
+
+    printMe("This is a method from NonStaticExample!");
+    System.out.println("This is new stuff!");
+  }
+}
+        </pre>
+        <span class="bold">Compiling an Extention of a Final Class:</span>
+        <pre class="code">
+Alexs-MacBook-Pro:blogCodeExamples alex$ javac
+ExtendingFinal.java
+ExtendingFinal.java:1: error: cannot inherit f
+rom final NonStaticExampleFinal
+public class ExtendingFinal extends NonStaticE
+xampleFinal{
+                                    ^
+Alexs-MacBook-Pro:blogCodeExamples alex$
+        </pre>
+
+
+
+
+
+
+				<p>Links to Java source code for working examples:
+          <a href="https://github.com/amp89/blogCodeExamples/blob/master/Extending.java">Extending, </a>
+          <a href="https://github.com/amp89/blogCodeExamples/blob/master/ExtendingFinal.java">Extending Final, </a>
+          <a href="https://github.com/amp89/blogCodeExamples/blob/master/NonStaticExample.java">Non Static Example, </a>
+          <a href="https://github.com/amp89/blogCodeExamples/blob/master/NonStaticExampleFInal.java">Non Static Example Final, </a>
+          <a href="https://github.com/amp89/blogCodeExamples/blob/master/NonStaticObject.java">Non Static Object, </a>
+          <a href="https://github.com/amp89/blogCodeExamples/blob/master/RandomMath.java">Random Math, </a>
+          <a href=" https://github.com/amp89/blogCodeExamples/blob/master/StaticExample.java">Static Example, </a>
+          <a href="https://github.com/amp89/blogCodeExamples/blob/master/StaticObject.java">Static Object</a>.
+
+
+
+				</p>
+
+
+
+			</div><!-- end main area -->
+
+
+
+			<div id="footer">
+				<div class="footer_item">
+					<a href="index.html">Home</a>
+				</div>
+
+				<div class="footer_item">
+					<a href="latest.html">Latest Post</a>
+				</div>
+
+				<div class="footer_item">
+					<a href="all.html">All Posts</a>
+				</div>
+
+				<div class="footer_item">
+					<a href="contact.html">Contact Info</a>
+				</div>
+
+
+			</div>
+		</div>
+	</body>
+
+
+</html>
